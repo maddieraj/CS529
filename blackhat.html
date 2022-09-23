@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="viz_black.js"></script>
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <title>
+        Madhumitha Rajarajan
+    </title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="./index.html"> Home </a>
+        <a href="./visualization.html">Visualization</a>
+        <a href="./svg.html"> SVG </a>
+        <a class="active" href="./blackhat.html"> Black Hat Viz</a>
+        <a href="./whitehat.html"> White Hat Viz</a>
+        
+    <div class="topnav-right">
+        <a href="./credits.html">Credits</a>
+    </div>         
+    </div>
+    <header>
+        <h1>Residing in east coast gets you killed! </h1>
+    </header>
+    <div class="bp">
+        <svg id="map" style="margin: 2px; width: 1000; height: 500;"></svg>
+        <div class="bp">
+        <h2> About this project </h2>
+        <p> Although this map shows the distributions of the death across the map for each state, it is deceptive in following ways: <br>
+        
+
+            First, the higher number of victims are in California, but looking at this map, it misleads us into thinking the more number of deaths in somewhere in east coast.  </br>
+            Second, female and male markers have the same color which makes it hard to distinguish between them. <br>
+            Third, merely plotting the points does not tell us anything about the overall death in that state. <br>
+            Finally, the title is a bit misleading as we have no information on the total number of deaths to prove it.        
+     
+        </p>
+    </div>
+    </body>
+    </html>

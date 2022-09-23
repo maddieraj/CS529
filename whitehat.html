@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/sgd.css">
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> 
+
+    <title>
+        Madhumitha Rajarajan
+    </title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="./index.html"> Home </a>
+        <a href="./visualization.html">Visualization</a>
+        <a href="./svg.html"> SVG </a>
+        <a href="./blackhat.html"> Black Hat Viz</a>
+        <a class="active" href="./whitehat.html"> White Hat Viz</a>
+        
+    <div class="topnav-right">
+        <a href="./credits.html">Credits</a>
+    </div>         
+    </div>
+    <header>
+        <h2> <b>White Hat Visualization of Slate Gun Deaths </b></h2>
+    </header>
+        <div class="row" style="margin: 20px 0px;">
+            <br />
+            <br />
+            <div class="col-3"></div>
+            <div class="col-6">
+                <p> The map below shows the number of murder victims across the US. The overall victims is loaded onto a chloropleth map,
+                    ranging from light to darker shade, the latter indicating higher number of deaths.<br>
+                    <b> Hovering </b>on any state will give the breakdown of deaths for each state based on the gender. <br>
+                    <b> Clicking </b>on any state will show the list of deaths in each cities for that state in the table for various age groups. <br>
+                    Click <a href="/about.html">HERE</a> to learn about this project
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row totalsBanner" style="margin: 20px 0px;">
+            <div class="col-2"> </div>
+            <div class="col-4">
+                <span class="clrMales">Male</span> Deaths <span class="stateDrillDown"></span>: <span id="totalMaleDeaths">3</span> <br />
+                <span class="subTotals">Children: </span><span class="subTotals" id="maleChildren"></span> <br>
+                <span class="subTotals">Teens: </span><span class="subTotals" id="maleTeens"></span> <br>
+                <span class="subTotals">Adults: </span><span class="subTotals" id="maleAdults"></span>
+            </div>
+            <div class="col-4">
+                <span class="clrFemales">Female</span> Deaths <span class="stateDrillDown"></span>: <span id="totalFemaleDeaths">3</span><br />
+                <span class="subTotals">Children: </span><span class="subTotals" id="femaleChildren"></span> <br>
+                <span class="subTotals">Teens: </span><span class="subTotals" id="femaleTeens"></span> <br>
+                <span class="subTotals">Adults: </span><span class="subTotals" id="femaleAdults"></span>
+            </div>
+            <div class="col-2"> </div>
+
+        </div>
+
+        <div class="row center-items" style="margin: 10px">
+            <div class="col-8 center-container">
+                <div id="tooltip-container"></div>
+                <div class="viz center-container"></div>
+            </div>
+            <div class="col-4">
+                <table id="maintable" cellspacing="0" cellpadding="0">
+
+                </table>
+            </div>
+        </div>
+
+        <div class="container center-items full-height">
+            <div class="gridBody col-12 full-width center-container full-height">
+                <div id="gridtip-container"></div>
+                <div id="grid-ma" class="gridV full-width center-container full-height"></div>
+                <div id="grid-fa" class="gridV full-width center-container full-height"></div>
+                <div id="grid-mt" class="gridV full-width center-container full-height"></div>
+                <div id="grid-ft" class="gridV full-width center-container full-height"></div>
+                <div id="grid-mc" class="gridV full-width center-container full-height"></div>
+                <div id="grid-fc" class="gridV full-width center-container full-height"></div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-3 adult-male" style="text-align: right">
+                223<i class="fas fa-male fa-7x" style="color: darkred;"></i>
+            </div>
+            <div class="col-3 adult-female">
+                <i class="fas fa-female fa-7x"></i> 223
+            </div>
+            <div class="col-3 teenchild-male" style="text-align: right;">
+                223 <i class="fas fa-male fa-5x" style="color: darkred;"></i>
+            </div>
+            <div class="col-3 teenchild-female">
+                <i class="fas fa-male fa-5x"></i> 223
+            </div>
+
+        </div> -->
+       
+    </div>
+        
+    <script src="viz_white.js"></script>
+
+    </body>
+    </html>
